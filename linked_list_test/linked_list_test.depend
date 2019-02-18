@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1550496062 source:c:\users\holge\desktop\code\linked_list_test\linked_list_test.c
+	<stdio.h>
+	<stdlib.h>
+
