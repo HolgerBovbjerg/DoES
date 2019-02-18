@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1550506594 source:c:\users\holge\desktop\code\lektion-3\beer.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Beer.h"
+
+1550506625 c:\users\holge\desktop\code\lektion-3\beer.h
+
+1550506669 source:c:\users\holge\desktop\code\lektion-3\main.c
+	<stdio.h>
+	"Beer.h"
+
