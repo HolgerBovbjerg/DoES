@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1550581672 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\lektion-1\lesson-1.c
+	<stdlib.h>
+	<stdio.h>
+
