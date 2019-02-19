@@ -41,34 +41,34 @@ void seeBeers(Beer *beer) { /*Iterates through beer database and prints out all 
 Beer *deleteSpecificBeer(Beer *beer, char *type) { /*Deletes a specific beer by its type (name)*/
    Beer *start,*old; /*Make start and old pointer of Beer type */
    int i; /*Integer i for iterating through beers */
-   start = beer; /*Set start equal to current beer */
-   old = NULL; /* Set old beer to "NULL"*/
+   start = beer; /*Save first beer node for later use */
+   old = NULL; /* Set old beer to "NULL" because there are no earilier nodes at the beginning*/
    for (i=0; i<g_nNumberOfBeers; i++) { /* For every beer node do*/
         if(!strcmp(beer->type, type)) {/*If current beers type is the one we are looking for then (means we have found what we are looking for)*/
-            if(!old) { /*If old is not zero*/
-                    old=beer->next; /*Set old to the beer node that current beer node in linked list is pointing to */
+            if(!old) { /*Check if we want to delete first node*/
+                    old=beer->next; /*Set old (NULL) to first node */
             free(old); /*Free up memory space from old*/
             g_nNumberOfBeers--; /* Decrease number of beers in database by one since we just deleted a beer */
-            return old; /* Return old beer*/
+            return old; /* Return old beer because first entry is changed*/
         }
-        old->next=beer->next; /*Set the node that old is pointing to to the beer that current beer is poitning to */
-        free(beer); /*Free up memory space from beer*/
+        old->next=beer->next; /* Skipping the node that we want to delete */
+        free(beer); /*Free up memory space from beer we deleted */
         g_nNumberOfBeers--; /* Decrease number of beers in database by one since we just deleted a beer */
-        return start; /* Return start beer */
+        return start; /* Return start beer because first entry is not changed */
         }
-        old=beer; /* Set old equal to beer */
-        beer=beer->next; /* Set beer to the beer node that current beer node is pointing at */
+        old=beer; /* Save old beer*/
+        beer=beer->next; /* Set beer to next node in linked list */
    }
-   return start; /* Return start beer */
+   return start; /* Return start beer - no beer matched */
 }
 
 void deleteBeer(Beer *beer) { /* Deletes a beer from database */
     char beer_to_delete[81]; /* Variable for name of beer type to delete */
-//    char yes_no[1];
     printf("Which beer do you want to delete (Type)?: \n"); /*Asking for beer type to delete  */
     seeBeers(beer); /* Show options */
     scanf("%s", beer_to_delete); /* User chooses beer type to delete */
     deleteSpecificBeer(beer, beer_to_delete); /* Call delete beer by type function */
+//    char yes_no[1];                                                   /*Experiment with user interface for double checking */
 //    printf("Do you want to delete this beer: %s? (y/n)\n",beer->type);
 //    scanf("%c", yes_no);
 //    if (!strcmp(yes_no,"y")) {
