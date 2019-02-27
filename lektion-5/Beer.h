@@ -13,3 +13,4 @@ Beer *deleteSpecificBeer(Beer *beer, char type[81]);
 int noOfBeers();
 void saveBeers(Beer *beer);
 Beer *importBeers(Beer *beer);
+const char* getfield(char* line, int num);

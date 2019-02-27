@@ -81,35 +81,52 @@ int noOfBeers() { /* Returns no. of beers in database */
 }
 
 void saveBeers(Beer *beer){
-Beer *tmp;
-FILE *file;
-file=fopen("beers.csv","w");
-if (!file){
-    printf("Cannot open file. \n");
-}
-/*fprintf(file,"Type,Price,Percentage,Amount \n"); */
-for (int i=0; i<g_nNumberOfBeers; i++) { /*For the total number of data entrys do */
-      tmp=beer->next; /*Set temporary beer to the beer that current beer node is pointing at */
-      fprintf(file,"%s,",beer->type);              /*Print out info for current beer node*/
-      fprintf(file,"%.1f,",beer->price);
-      fprintf(file,"%.1f,",beer->alc);
-      fprintf(file,"%.1f\n",beer->ml);
-      beer=tmp;    /*Set current beer to the next beer node in linked list (temporary beer) */
-   }
-   fclose(file);
+    Beer *tmp;
+    int i;
+    FILE *file;
+
+    file=fopen("beers.txt","w");
+    if (!file) {
+        fprintf(stderr,"Error: Cannot open beers.txt\n");
+        exit(1); /* Exit program with error code 1 */
+    }
+    for (i=0; i<g_nNumberOfBeers; i++) { /*For the total number of data entrys do */
+          tmp=beer->next; /*Set temporary beer to the beer that current beer node is pointing at */
+          fprintf(file,"%s\n",beer->type);              /*Print out info for current beer node*/
+          fprintf(file,"%f\n",beer->price);
+          fprintf(file,"%f\n",beer->alc);
+          fprintf(file,"%f\n",beer->ml);
+          beer=tmp;    /*Set current beer to the next beer node in linked list (temporary beer) */
+    }
+    fclose(file);
 }
 
 Beer *importBeers(Beer *beer){
-    char type_tmp[81];
-    Beer *new_beer;
-    FILE *file = fopen("beers.csv","r");;
-    char buff[255];
-    if (!file) printf("Cannot find file. \n");
-    /*while(!feof(file)){
+    Beer tmp, *new_beer; /*New instance of beer and temporary instance of beer */
+    FILE* stream;
+    int n1,n2,n3,n4; /*Variables for checking content*/
+    stream = fopen("beers.txt","r");
 
-    }*/
-    fscanf(file, "%s", buff);
-    printf("%s",buff);
-    fclose(file);
+    if (!stream) {
+        fprintf(stderr,"Error: Cannot open beers.txt\n");
+        exit(1);
+    }
+    while (!feof(stream)) {
+        n1=fscanf(stream,"%s",tmp.type);
+        n2=fscanf(stream,"%f",&tmp.price);
+        n3=fscanf(stream,"%f",&tmp.alc);
+        n4=fscanf(stream,"%f",&tmp.ml);
+        if ((n1<0) || (n2<0) || (n3<0) || (n4<0)) break; /* Premature EOF */
+
+        new_beer=(Beer *)malloc(sizeof(Beer)); /*allocating memory for new beer*/
+        new_beer->next=beer;
+        strcpy(new_beer->type,tmp.type);
+        new_beer->price=tmp.price;
+        new_beer->alc=tmp.alc;
+        new_beer->ml=tmp.ml;
+        beer=new_beer; /* beer must be updated once per added beer */
+        g_nNumberOfBeers++; /* We increment since we just added a beer */
+    }
+    fclose(stream);
     return beer;
 }

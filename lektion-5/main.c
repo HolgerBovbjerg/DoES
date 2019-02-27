@@ -17,17 +17,28 @@ int menu() {
 
 int main() {
     Beer *beer; /*Create beer struct */
-    int nSelection=0; /*Set menu element selcetion variable to zero*/
-    while (nSelection!=6) { /*As long as stop program option is not chosen run*/
-        nSelection=menu(); /*Run menu function */
-        if (nSelection==1) beer=addBeer(beer); /*If choice is 1 run addBeer function */
-        else if (nSelection==2) seeBeers(beer); /*If choice is 2 run seeBeers function*/
-        else if (nSelection==3) { /*If choice is 3 run deleteBeer function*/
-            if (noOfBeers() != 0) deleteBeer(beer); /*If there are beers in the database do */
-            else printf("No beers to delete.\n"); /*If there are no beers in database print*/
-        }
-        else if (nSelection==4) saveBeers(beer);
-        else if (nSelection==5) importBeers(beer);
-    }
+    beer=NULL;
+    while (1) {
+      switch (menu()) {
+         case 1:
+            beer=addBeer(beer);
+            break;
+         case 2:
+            seeBeers(beer);
+            break;
+         case 3:
+            deleteBeer(beer);
+            break;
+         case 4:
+            saveBeers(beer);
+            break;
+         case 5:
+            beer=importBeers(beer); /* Simple appending */
+            break;
+         case 6:
+            goto End;
+      }
+   }
+   End:
     return 0;
 }
