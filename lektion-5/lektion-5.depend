@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1551255411 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\lektion-5\main.c
+	<stdio.h>
+	"Beer.h"
+
+1551258389 c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\lektion-5\beer.h
+
+1551261412 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\lektion-5\beer.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Beer.h"
+

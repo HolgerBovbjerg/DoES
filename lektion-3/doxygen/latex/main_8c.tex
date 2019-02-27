@@ -1,0 +1,53 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Beer.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae83fcdbeb2b6757fc741ae953b633ee1}{menu}} ()
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+main main function \begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+$<$ Create beer struct
+
+$<$ Set menu element selcetion variable to zero
+
+$<$ As long as stop program option is not chosen run
+
+$<$ Run menu function
+
+$<$ If choice is 1 run add\+Beer function
+
+$<$ If choice is 2 run see\+Beers function
+
+$<$ If choice is 3 run delete\+Beer function
+
+$<$ If there are beers in the database do
+
+$<$ If there are no beers in database print \mbox{\Hypertarget{main_8c_ae83fcdbeb2b6757fc741ae953b633ee1}\label{main_8c_ae83fcdbeb2b6757fc741ae953b633ee1}} 
+\index{main.c@{main.c}!menu@{menu}}
+\index{menu@{menu}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily int menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+menu function for displaying menu and asking for choice \begin{DoxyReturn}{Returns}
+n\+Selecetion return selected number/choice 
+\end{DoxyReturn}
+$<$ Menu element selection variable
+
+Print options
+
+$<$ Look for choice 
