@@ -1,0 +1,8 @@
+Compilation, type:
+
+	make
+
+Remove executable and object file:
+
+	make clean
+

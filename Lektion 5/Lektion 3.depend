@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1550483246 source:c:\users\thoma\documents\codeblocks\lektion 3\main.c
+	<stdio.h>
+	"Beer.h"
+
+1550486927 c:\users\thoma\documents\codeblocks\lektion 3\beer.h
+
+1550486936 source:c:\users\thoma\documents\codeblocks\lektion 3\beer.c
+	<stdio.h>
+	<stdlib.h>
+	"Beer.h"
+
+1551091179 source:c:\users\thoma\documents\codeblocks\lektion 5\main.c
+	<stdio.h>
+	"Beer.h"
+
+1551090790 c:\users\thoma\documents\codeblocks\lektion 5\beer.h
+
+1551091164 source:c:\users\thoma\documents\codeblocks\lektion 5\beer.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Beer.h"
+
