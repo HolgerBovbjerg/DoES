@@ -1,0 +1,138 @@
+\hypertarget{_beer_8c}{}\section{Beer.\+c File Reference}
+\label{_beer_8c}\index{Beer.c@{Beer.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Beer.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_beer}{Beer}} $\ast$ \mbox{\hyperlink{_beer_8c_a27c747ea16b0df7c83827369d7e7e863}{add\+Beer}} (\mbox{\hyperlink{struct_beer}{Beer}} $\ast$beer)
+\item 
+void \mbox{\hyperlink{_beer_8c_aaae2b37db6175077e9413dabac7e1526}{see\+Beers}} (\mbox{\hyperlink{struct_beer}{Beer}} $\ast$beer)
+\item 
+\mbox{\hyperlink{struct_beer}{Beer}} $\ast$ \mbox{\hyperlink{_beer_8c_a8bbbff8eec86321d681cf39e3133cfa3}{delete\+Specific\+Beer}} (\mbox{\hyperlink{struct_beer}{Beer}} $\ast$beer, char $\ast$type)
+\item 
+void \mbox{\hyperlink{_beer_8c_a5f09ff6e1e0f382138383de874c066ac}{delete\+Beer}} (\mbox{\hyperlink{struct_beer}{Beer}} $\ast$beer)
+\item 
+int \mbox{\hyperlink{_beer_8c_abba5306f58b1c91e28598fc934c477f3}{no\+Of\+Beers}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_beer_8c_a27c747ea16b0df7c83827369d7e7e863}\label{_beer_8c_a27c747ea16b0df7c83827369d7e7e863}} 
+\index{Beer.c@{Beer.c}!addBeer@{addBeer}}
+\index{addBeer@{addBeer}!Beer.c@{Beer.c}}
+\subsubsection{\texorpdfstring{addBeer()}{addBeer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_beer}{Beer}}$\ast$ add\+Beer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_beer}{Beer}} $\ast$}]{beer }\end{DoxyParamCaption})}
+
+Function for adding beer to database 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_beer}{Beer}}} & $\ast$beer a pointer to a beer node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new\+\_\+beer 
+\end{DoxyReturn}
+$<$ Allocates space for new element/node.
+
+$<$ Insert new element/beer before any other element.
+
+$<$ Making the next variable of new\+\_\+beer point to a \mbox{\hyperlink{struct_beer}{Beer}} struct \char`\"{}beer\char`\"{}.
+
+Asking for information and adding that to new\+\_\+beer.
+
+$<$ We increment amount of beers since we just added a beer. \mbox{\Hypertarget{_beer_8c_a5f09ff6e1e0f382138383de874c066ac}\label{_beer_8c_a5f09ff6e1e0f382138383de874c066ac}} 
+\index{Beer.c@{Beer.c}!deleteBeer@{deleteBeer}}
+\index{deleteBeer@{deleteBeer}!Beer.c@{Beer.c}}
+\subsubsection{\texorpdfstring{deleteBeer()}{deleteBeer()}}
+{\footnotesize\ttfamily void delete\+Beer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_beer}{Beer}} $\ast$}]{beer }\end{DoxyParamCaption})}
+
+Deletes a beer from database 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_beer}{Beer}}} & $\ast$beer a pointer to a beer node. \\
+\hline
+\end{DoxyParams}
+$<$ Variable for name of beer type to delete
+
+$<$ Asking for beer type to delete
+
+$<$ Show options.
+
+$<$ User chooses beer type to delete.
+
+$<$ Call delete beer by type function. \mbox{\Hypertarget{_beer_8c_a8bbbff8eec86321d681cf39e3133cfa3}\label{_beer_8c_a8bbbff8eec86321d681cf39e3133cfa3}} 
+\index{Beer.c@{Beer.c}!deleteSpecificBeer@{deleteSpecificBeer}}
+\index{deleteSpecificBeer@{deleteSpecificBeer}!Beer.c@{Beer.c}}
+\subsubsection{\texorpdfstring{deleteSpecificBeer()}{deleteSpecificBeer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_beer}{Beer}}$\ast$ delete\+Specific\+Beer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_beer}{Beer}} $\ast$}]{beer,  }\item[{char $\ast$}]{type }\end{DoxyParamCaption})}
+
+Function for deleting a beer by type. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_beer}{Beer}}} & $\ast$beer a pointer to a beer node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to first beer in database. 
+\end{DoxyReturn}
+$<$ Make start and old pointer of \mbox{\hyperlink{struct_beer}{Beer}} type
+
+$<$ Integer i for iterating through beers
+
+$<$ Save first beer node for later use
+
+$<$ Set old beer to \char`\"{}\+N\+U\+L\+L\char`\"{} because there are no earilier nodes at the beginning
+
+$<$ For every beer node do
+
+$<$ If current beers type is the one we are looking for then (means we have found what we are looking for)
+
+$<$ Check if we want to delete first node
+
+$<$ Set old (N\+U\+LL) to first node
+
+$<$ Free up memory space from old
+
+$<$ Decrease number of beers in database by one since we just deleted a beer
+
+$<$ Return old beer because first entry is changed
+
+$<$ Skipping the node that we want to delete
+
+$<$ Free up memory space from beer we deleted
+
+$<$ Decrease number of beers in database by one since we just deleted a beer
+
+$<$ Return start beer because first entry is not changed
+
+$<$ Save old beer
+
+$<$ Set beer to next node in linked list \mbox{\Hypertarget{_beer_8c_abba5306f58b1c91e28598fc934c477f3}\label{_beer_8c_abba5306f58b1c91e28598fc934c477f3}} 
+\index{Beer.c@{Beer.c}!noOfBeers@{noOfBeers}}
+\index{noOfBeers@{noOfBeers}!Beer.c@{Beer.c}}
+\subsubsection{\texorpdfstring{noOfBeers()}{noOfBeers()}}
+{\footnotesize\ttfamily int no\+Of\+Beers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function for deleting a beer by type. \begin{DoxyReturn}{Returns}
+Number of beers in database. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_beer_8c_aaae2b37db6175077e9413dabac7e1526}\label{_beer_8c_aaae2b37db6175077e9413dabac7e1526}} 
+\index{Beer.c@{Beer.c}!seeBeers@{seeBeers}}
+\index{seeBeers@{seeBeers}!Beer.c@{Beer.c}}
+\subsubsection{\texorpdfstring{seeBeers()}{seeBeers()}}
+{\footnotesize\ttfamily void see\+Beers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_beer}{Beer}} $\ast$}]{beer }\end{DoxyParamCaption})}
+
+Function for displaying beers in database and their info. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_beer}{Beer}}} & $\ast$beer a pointer to a beer node. \\
+\hline
+\end{DoxyParams}
+$<$ Temporary instance of \mbox{\hyperlink{struct_beer}{Beer}} for iterating.
+
+$<$ For the total number of data entrys do.
+
+$<$ Set temporary beer to the beer that current beer node is pointing at.
+
+Print out info for current beer node.
+
+$<$ Set current beer to the next beer node in linked list (temporary beer). 

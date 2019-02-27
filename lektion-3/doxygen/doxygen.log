@@ -1,0 +1,22 @@
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:14: warning: argument 'Beer' of command @param is not found in the argument list of addBeer(Beer *beer)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:18: warning: The following parameters of addBeer(Beer *beer) are not documented:
+  parameter 'beer'
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:80: warning: argument 'Beer' of command @param is not found in the argument list of deleteBeer(Beer *beer)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:83: warning: The following parameters of deleteBeer(Beer *beer) are not documented:
+  parameter 'beer'
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:52: warning: argument 'Beer' of command @param is not found in the argument list of deleteSpecificBeer(Beer *beer, char *type)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:56: warning: The following parameters of deleteSpecificBeer(Beer *beer, char *type) are not documented:
+  parameter 'beer'
+  parameter 'type'
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:35: warning: argument 'Beer' of command @param is not found in the argument list of seeBeers(Beer *beer)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:38: warning: The following parameters of seeBeers(Beer *beer) are not documented:
+  parameter 'beer'
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:14: warning: argument 'Beer' of command @param is not found in the argument list of addBeer(Beer *beer)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.h:14: warning: The following parameters of addBeer(Beer *beer) are not documented:
+  parameter 'beer'
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:80: warning: argument 'Beer' of command @param is not found in the argument list of deleteBeer(Beer *beer)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.h:15: warning: The following parameters of deleteBeer(Beer *beer) are not documented:
+  parameter 'beer'
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.c:35: warning: argument 'Beer' of command @param is not found in the argument list of seeBeers(Beer *beer)
+C:/Users/holge/Dropbox/AAU - Elektronik og IT/4. semester/Design of Embedded Software/DoES/lektion-3/Beer.h:16: warning: The following parameters of seeBeers(Beer *beer) are not documented:
+  parameter 'beer'
