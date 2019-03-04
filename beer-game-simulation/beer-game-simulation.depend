@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1551690469 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\beer-game-simulation\main.c
+	<stdio.h>
+	<stdlib.h>
+	"beersim.h"
+	<time.h>
+
+1551690326 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\beer-game-simulation\beersim.c
+	<stdio.h>
+	<stdlib.h>
+	"beersim.h"
+
+1551690231 c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\beer-game-simulation\beersim.h
+
