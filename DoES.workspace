@@ -5,5 +5,8 @@
 		<Project filename="lektion-2/lektion-2.cbp" />
 		<Project filename="lektion-3/lektion-3.cbp" />
 		<Project filename="lektion-5/lektion-5.cbp" />
+		<Project filename="../../../../../Desktop/lek5_test/lek5_test.cbp" />
+		<Project filename="lotto-program/lotto-program.cbp" />
+		<Project filename="beer-game-simulation/beer-game-simulation.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

@@ -1,0 +1,2 @@
+void sortNumbers();
+void scanNumbers();
