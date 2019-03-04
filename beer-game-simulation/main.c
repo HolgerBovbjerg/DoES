@@ -5,10 +5,10 @@
 
 int menu() {
    int nSelection; /*Menu element selection variable*/
-   printf("What do you want to do?:\n");       /*Print options */
-   printf("1) Play game\n");
-   printf("2) Calculate average beer price\n");
-   printf("3) Stop program\n");
+   printf("Please choose what you want to do:\n");       /*Print options */
+   printf("1) Play game?\n");
+   printf("2) Calculate average beer price, and get advice?\n");
+   printf("3) Stop program?\n");
    scanf("%d",&nSelection); /*Look for choice */
    return nSelection; /* Return choice */
 }
@@ -25,11 +25,15 @@ int main() {
             case 2:
                 priceAvg = avgPrice();
                 printf("Avg price is: %d \n", priceAvg);
-                if (priceAvg > 14) {
+                if (priceAvg > 10) {
                     printf("It is cheaper just to buy the beer.\n");
                 }
+                else if (priceAvg == 10)
+                    {
+                    printf("Same price, but maybe you're lucky.\n");
+                }
                 else {
-                    printf("Let's play!\n");
+                    printf("Go for it. Let's play!\n");
                 };
                 break;
             case 3:
