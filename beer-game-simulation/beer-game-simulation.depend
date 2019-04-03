@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1551690469 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\beer-game-simulation\main.c
+1551691340 source:c:\users\holge\dropbox\aau - elektronik og it\4. semester\design of embedded software\does\beer-game-simulation\main.c
 	<stdio.h>
 	<stdlib.h>
 	"beersim.h"
